@@ -24,17 +24,17 @@ class LastViewVC: BaseViewController {
   private let loadingView = UIView()
   
 
-  
+  //MARK: We will set MRZDelegate here because we're gonna manage mrz results. You can manage the flow according to the result.
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    self.navigationItem.title = "Back Side"
+    amani.setMRZDelegate(delegate: self)
     DispatchQueue.main.async {
       self.setupLoadingView()
-      self.confirmButton.isEnabled = false
     }
    
     view.backgroundColor = .white
-    amani.setMRZDelegate(delegate: self)
+  
     confirmButton.addTarget(self, action: #selector(tapConfirm(_:)), for: .touchUpInside)
     tryAgainButton.addTarget(self, action: #selector(tapTryAgain(_:)), for: .touchUpInside)
     setUI()
@@ -45,8 +45,9 @@ class LastViewVC: BaseViewController {
     super.viewWillAppear(animated)
     do {
       startLoading()
+      //MARK: We should call getMrz method before doing the nfc process or upload request.
        amani.IdCapture().getMrz(cb: { mrzDocId in
-        debugPrint("lasviewVC mrz Doc değeri: \(mrzDocId)")
+       
          self.mrzdocumentID = mrzDocId
          DispatchQueue.main.async {
            self.confirmButton.isEnabled = true
@@ -102,7 +103,7 @@ class LastViewVC: BaseViewController {
   }
   
   private func setUI() {
-    debugPrint("preImage previewVC içerisine geldi: \(lastImage)")
+    
     previewImage.image = lastImage
     buttonStackView.axis = .horizontal
     buttonStackView.spacing = 16
@@ -142,9 +143,11 @@ class LastViewVC: BaseViewController {
   
 }
 
+
+//MARK: This delegate will return to you mrz result and customer's documentId. Here is the most important step before start nfc process.
 extension LastViewVC: mrzInfoDelegate {
   func mrzInfo(_ mrz: AmaniSDK.MrzModel?, documentId: String?) {
-    debugPrint("document ID ve mrz: \(documentId), \(mrz)")
+    debugPrint("document ID and mrz: \(documentId), \(mrz)")
     
     guard let mrz = mrz else  {return}
     
@@ -158,11 +161,11 @@ extension LastViewVC: mrzInfoDelegate {
         let nviData = NviModel(mrzModel: mrz)
         self.nviData = nviData
       }
-      stopLoading()
+    
     default:
       break
     }
-    
+    stopLoading()
   }
   
 }

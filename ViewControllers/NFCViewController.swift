@@ -16,18 +16,20 @@ class NFCViewController: BaseViewController {
   let descriptionLabel = UILabel()
   let scanNFCButton = UIButton()
   var nviData:NviModel?
-  
-  
+
+  //MARK: We set the nviData we obtained from mrzInfoDelegate when starting the nfc process.
   @objc func tapScanNFCButton(_ sender: UIButton) {
     Task {
       if let nviData = self.nviData {
         amani.IdCapture().setNfcIcons(newReadIcon: "👀",newBlankIcon: "🚀")
         let param = await amani.IdCapture().startNFC(nvi: nviData)
-        
+       
         if !param == false {
+         
           amani.IdCapture().upload { isUploaded in
             debugPrint("id capture uploaded succes: \(isUploaded)")
             if let isUploaded = isUploaded {
+             
               self.showAlert(isUploaded: isUploaded)
             }
             
@@ -44,9 +46,7 @@ class NFCViewController: BaseViewController {
     self.navigationItem.title = "NFC Scan"
     setUI()
   }
-  private func deneme() {
-    
-  }
+
   private func showAlert(isUploaded: Bool) {
     DispatchQueue.main.async {
       var actions: [(String, UIAlertAction.Style)] = []
@@ -67,7 +67,7 @@ class NFCViewController: BaseViewController {
   
   
   private func setUI() {
-    descriptionLabel.text = "Please scan your ID card with NFC"
+    descriptionLabel.text = "Please scan your ID card with NFC and wait the result."
     descriptionLabel.textColor = .black
     descriptionLabel.textAlignment = .center
     descriptionLabel.font = .systemFont(ofSize: 17, weight: .medium)

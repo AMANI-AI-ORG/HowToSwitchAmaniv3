@@ -22,7 +22,7 @@ class AmaniInitializaion: UIViewController  {
   private var submitButton = UIButton()
   private var formView = UIStackView()
   private var mainStackView = UIStackView()
-
+  //MARK: We're setting AmaniSDK instance as propery here
   let amani:Amani = Amani.sharedInstance
   
   @objc func tapSubmit(_ sender: UIButton) {
@@ -176,12 +176,15 @@ class AmaniInitializaion: UIViewController  {
   
  
   
-  
+  //MARK: We should set AmaniSDK's Delegate before initAmani method.
+  //MARK: We're gonna monitoring "customer profile status changes or when the customer completes a step, either successfuly or a failure" this kind of results from delegates.
   private func initAmani(serverURL: String, token: String) {
+
     amani.setDelegate(delegate: self)
-    amani.setMRZDelegate(delegate: self)
-    let customer = CustomerRequestModel.init(idCardNumber: "22180378472")
+    let customer = CustomerRequestModel.init(idCardNumber: "22180378472") //MARK: you should here customer's id card number
     do {
+      
+    //MARK: You must add the version of the backend service you are using as a parameter here. In addition, AmaniSDK v3 is compatible v1 back service.
       
    try? amani.initAmani(server: serverURL, token: token, apiVersion: apiVersion) { cmModel, error in
         debugPrint(cmModel)
@@ -241,7 +244,7 @@ extension AmaniInitializaion: UITextFieldDelegate {
   }
 }
 
-
+//MARK: The customer's session results gonna print here.
 extension AmaniInitializaion: AmaniDelegate {
   func onProfileStatus(customerId: String, profile: AmaniSDK.wsProfileStatusModel) {
     print(customerId, profile)
@@ -258,9 +261,4 @@ extension AmaniInitializaion: AmaniDelegate {
   
 }
 
-extension AmaniInitializaion:mrzInfoDelegate {
-  func mrzInfo(_ mrz: AmaniSDK.MrzModel?, documentId: String?) {
-    print("viewcontroler side mrzInfodelegate triggered: \(mrz), \(documentId)")
-  }
-}
 //

@@ -25,6 +25,7 @@ class PreviewVC: BaseViewController {
       if DocID == "ID" {
         self.step += 1
         let idCapture = self.amani.IdCapture()
+          //MARK: We should set id card stepID for back side. that value must be 1.
         guard let IdCapture2:UIView = try idCapture.start( stepId: steps.back.rawValue , completion: { (previewImage) in
           DispatchQueue.main.async {
             if self.step == 1 {
@@ -40,7 +41,7 @@ class PreviewVC: BaseViewController {
         
         self.view.addSubview(IdCapture2)
       } else {
-        
+        //MARK: In this step if document is Selfie, there is just one image so I can upload which captured selfie image here as like the bottom. the method will return request response as boolean value.
           let selfieCapture = self.amani.selfie()
           
         selfieCapture.upload { isUploadSelfie in
@@ -67,6 +68,7 @@ class PreviewVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       view.backgroundColor = .white
+      self.navigationItem.title = "Front Side"
       confirmButton.addTarget(self, action: #selector(tapConfirm(_:)), for: .touchUpInside)
       tryAgainButton.addTarget(self, action: #selector(tapTryAgain(_:)), for: .touchUpInside)
       setUI()

@@ -32,13 +32,15 @@ class IDCaptureViewController: BaseViewController {
   }
   
   private func setupUI() {
+    //MARK: We gonna set some necessary informations before IDcapture start session.
     let idCapture: IDCapture = amani.IdCapture()
     do {
-      idCapture.setType(type: "TUR_ID_1")
+      idCapture.setType(type: "TUR_ID_1") //MARK: You can find out whats your id doc type
       idCapture.setManualCropTimeout(Timeout: 30)
       idCapture.setVideoRecording(enabled: false)
       idCapture.setIdHologramDetection(enabled: false)
-      idCapture.setClientSideMRZ(enabled: false)
+      
+      //MARK: We should set id card stepID(As Integer). if the capture will success that method will return captured image
       guard let idCaptureView: UIView = try idCapture.start(stepId: steps.front.rawValue, completion: { [weak self](previewImage) in
         DispatchQueue.main.async {
         debugPrint(previewImage)

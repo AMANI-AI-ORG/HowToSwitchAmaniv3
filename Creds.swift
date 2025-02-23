@@ -8,5 +8,5 @@
 import Foundation
 import AmaniSDK
 
-var apiVersion:ApiVersions = .v2
+var apiVersion:ApiVersions = .v1
 
