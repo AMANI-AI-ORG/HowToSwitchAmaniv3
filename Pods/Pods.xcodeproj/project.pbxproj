@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AF96F2CB1E928E597E6F004D5D2AAF7E /* Build configuration list for PBXAggregateTarget "OpenSSL-Universal" */;
+			buildPhases = (
+				8BBDABD17052B8F0A5C2140F3D93C4A2 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = "OpenSSL-Universal";
+		};
+		F1D2C92A676B850B48B5D263DD82C744 /* AmaniSDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AFDC3B41EECE76EC94B3A15F279CAB0D /* Build configuration list for PBXAggregateTarget "AmaniSDK" */;
+			buildPhases = (
+				32148FA221EF0D26A473C0AEE09A2AD2 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				98D0BDD0270C36D983DAD8CA44CFC8A4 /* PBXTargetDependency */,
+			);
+			name = AmaniSDK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		4F5F303633E5BD66369991E48101B565 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		D2BAC7BB237188073615B4F0E92041DF /* Pods-HowToSwitchAmaniV3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A66DD013F25A27900CF1601F97DF03D4 /* Pods-HowToSwitchAmaniV3-dummy.m */; };
+		F2AF36B6E3DCAFA530A82EB0B927FE96 /* Pods-HowToSwitchAmaniV3-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E745133A75322C7EB24549785382CD77 /* Pods-HowToSwitchAmaniV3-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		274078C53ED709F22D50AB2CDBD46F57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9ED5194E665042005069EF06C82A050;
+			remoteInfo = "OpenSSL-Universal";
+		};
+		2FAF067AED81CECC3333AF0E45F377E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9ED5194E665042005069EF06C82A050;
+			remoteInfo = "OpenSSL-Universal";
+		};
+		ACED89E29AC7B3BDBF693EB805D4D9C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1D2C92A676B850B48B5D263DD82C744;
+			remoteInfo = AmaniSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4BB26E1DF47F59FFB345DFA906413C07 /* OpenSSL-Universal-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "OpenSSL-Universal-xcframeworks.sh"; sourceTree = "<group>"; };
+		52581C677D2243710CD579C14938C5E6 /* OpenSSL-Universal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-Universal.debug.xcconfig"; sourceTree = "<group>"; };
+		52C0E8E090F397591C30815A293305AE /* AmaniSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AmaniSDK.release.xcconfig; sourceTree = "<group>"; };
+		566AAB960210F7FEA11DB4CDF7A1453B /* AmaniSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = AmaniSDK.xcframework; sourceTree = "<group>"; };
+		785C5CF36051C28B3C961A6A4255671B /* Pods-HowToSwitchAmaniV3-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HowToSwitchAmaniV3-frameworks.sh"; sourceTree = "<group>"; };
+		7D994E691C6981707F7D4431BE03BC8A /* OpenSSL.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OpenSSL.xcframework; path = Frameworks/OpenSSL.xcframework; sourceTree = "<group>"; };
+		80F288C02E45D38C0D10C40CA32C60B7 /* AmaniSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "AmaniSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		87BA46E00FBB6BD5DE853E6D032F36F2 /* Pods-HowToSwitchAmaniV3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HowToSwitchAmaniV3.debug.xcconfig"; sourceTree = "<group>"; };
+		8F8A69053CA242CAC0924A39D2F091CB /* OpenSSL-Universal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-Universal.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FD52CCBFB47C96AD92F7AD5BD6343FB /* Pods-HowToSwitchAmaniV3-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HowToSwitchAmaniV3-acknowledgements.plist"; sourceTree = "<group>"; };
+		A66DD013F25A27900CF1601F97DF03D4 /* Pods-HowToSwitchAmaniV3-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HowToSwitchAmaniV3-dummy.m"; sourceTree = "<group>"; };
+		B2DC5C353629E261A340131D20FA465D /* Pods-HowToSwitchAmaniV3 */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HowToSwitchAmaniV3"; path = Pods_HowToSwitchAmaniV3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B9186C75F69975FFAAC7916317CB75 /* Pods-HowToSwitchAmaniV3-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HowToSwitchAmaniV3-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D5FD5223B30C3652A2554E04780373F9 /* Pods-HowToSwitchAmaniV3-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HowToSwitchAmaniV3-Info.plist"; sourceTree = "<group>"; };
+		E745133A75322C7EB24549785382CD77 /* Pods-HowToSwitchAmaniV3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HowToSwitchAmaniV3-umbrella.h"; sourceTree = "<group>"; };
+		EDC8E15E7DC84669B67213530E30A0DC /* Pods-HowToSwitchAmaniV3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HowToSwitchAmaniV3.modulemap"; sourceTree = "<group>"; };
+		F8E07232C8689214CBE4EA8136A49442 /* Pods-HowToSwitchAmaniV3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HowToSwitchAmaniV3.release.xcconfig"; sourceTree = "<group>"; };
+		FBFCF25569C33685EFE7BCE2E257EC8E /* AmaniSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AmaniSDK.debug.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		176257AFAC943C21B0B379297F001E81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F5F303633E5BD66369991E48101B565 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28FFFF5E8EF80ED9943F03DE378F409D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				566AAB960210F7FEA11DB4CDF7A1453B /* AmaniSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		490E838AB707B61AEFE077EB248A0204 /* OpenSSL-Universal */ = {
+			isa = PBXGroup;
+			children = (
+				9106237BF333C5DA69D13E4A692F405F /* Frameworks */,
+				9F7F8A03D70DE6FB3377E3A62608FBBC /* Support Files */,
+			);
+			name = "OpenSSL-Universal";
+			path = "OpenSSL-Universal";
+			sourceTree = "<group>";
+		};
+		6A4627AF71F8D447861EB6255FC8AE4A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCB5057B88FD602A97CBAEFDB13D2445 /* AmaniSDK */,
+				490E838AB707B61AEFE077EB248A0204 /* OpenSSL-Universal */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6F0DCF6716C44DEBF2016D4505E3F5C7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				89B15914BCE907D2A2F8847315DB0D46 /* Pods-HowToSwitchAmaniV3 */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7397282BA0E7B1D50FE310D7F0FBDE6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2DC5C353629E261A340131D20FA465D /* Pods-HowToSwitchAmaniV3 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89B15914BCE907D2A2F8847315DB0D46 /* Pods-HowToSwitchAmaniV3 */ = {
+			isa = PBXGroup;
+			children = (
+				EDC8E15E7DC84669B67213530E30A0DC /* Pods-HowToSwitchAmaniV3.modulemap */,
+				C1B9186C75F69975FFAAC7916317CB75 /* Pods-HowToSwitchAmaniV3-acknowledgements.markdown */,
+				9FD52CCBFB47C96AD92F7AD5BD6343FB /* Pods-HowToSwitchAmaniV3-acknowledgements.plist */,
+				A66DD013F25A27900CF1601F97DF03D4 /* Pods-HowToSwitchAmaniV3-dummy.m */,
+				785C5CF36051C28B3C961A6A4255671B /* Pods-HowToSwitchAmaniV3-frameworks.sh */,
+				D5FD5223B30C3652A2554E04780373F9 /* Pods-HowToSwitchAmaniV3-Info.plist */,
+				E745133A75322C7EB24549785382CD77 /* Pods-HowToSwitchAmaniV3-umbrella.h */,
+				87BA46E00FBB6BD5DE853E6D032F36F2 /* Pods-HowToSwitchAmaniV3.debug.xcconfig */,
+				F8E07232C8689214CBE4EA8136A49442 /* Pods-HowToSwitchAmaniV3.release.xcconfig */,
+			);
+			name = "Pods-HowToSwitchAmaniV3";
+			path = "Target Support Files/Pods-HowToSwitchAmaniV3";
+			sourceTree = "<group>";
+		};
+		8E8CE40B838F79A2CED4C22A672DCDED /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				80F288C02E45D38C0D10C40CA32C60B7 /* AmaniSDK-xcframeworks.sh */,
+				FBFCF25569C33685EFE7BCE2E257EC8E /* AmaniSDK.debug.xcconfig */,
+				52C0E8E090F397591C30815A293305AE /* AmaniSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AmaniSDK";
+			sourceTree = "<group>";
+		};
+		9106237BF333C5DA69D13E4A692F405F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D994E691C6981707F7D4431BE03BC8A /* OpenSSL.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F7F8A03D70DE6FB3377E3A62608FBBC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BB26E1DF47F59FFB345DFA906413C07 /* OpenSSL-Universal-xcframeworks.sh */,
+				52581C677D2243710CD579C14938C5E6 /* OpenSSL-Universal.debug.xcconfig */,
+				8F8A69053CA242CAC0924A39D2F091CB /* OpenSSL-Universal.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OpenSSL-Universal";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				6A4627AF71F8D447861EB6255FC8AE4A /* Pods */,
+				7397282BA0E7B1D50FE310D7F0FBDE6E /* Products */,
+				6F0DCF6716C44DEBF2016D4505E3F5C7 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCB5057B88FD602A97CBAEFDB13D2445 /* AmaniSDK */ = {
+			isa = PBXGroup;
+			children = (
+				28FFFF5E8EF80ED9943F03DE378F409D /* Frameworks */,
+				8E8CE40B838F79A2CED4C22A672DCDED /* Support Files */,
+			);
+			name = AmaniSDK;
+			path = AmaniSDK;
+			sourceTree = "<group>";
+		};
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0DE4D5ED901CB62E60E85E882C6D4A53 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2AF36B6E3DCAFA530A82EB0B927FE96 /* Pods-HowToSwitchAmaniV3-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8C13A78E825F91D3D7394287262B19D4 /* Pods-HowToSwitchAmaniV3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0DB153A80ACD18ED81D8605B1C25623 /* Build configuration list for PBXNativeTarget "Pods-HowToSwitchAmaniV3" */;
+			buildPhases = (
+				0DE4D5ED901CB62E60E85E882C6D4A53 /* Headers */,
+				3D3AB8EB20D89D02BCB8373E48389AF9 /* Sources */,
+				176257AFAC943C21B0B379297F001E81 /* Frameworks */,
+				1ABD139B6E942DF0FBE94F6AEB168206 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85A13074D56722FBBA91F94B22386303 /* PBXTargetDependency */,
+				0F796DFBFB3A75B38F0C2419322D6FE0 /* PBXTargetDependency */,
+			);
+			name = "Pods-HowToSwitchAmaniV3";
+			productName = Pods_HowToSwitchAmaniV3;
+			productReference = B2DC5C353629E261A340131D20FA465D /* Pods-HowToSwitchAmaniV3 */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7397282BA0E7B1D50FE310D7F0FBDE6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1D2C92A676B850B48B5D263DD82C744 /* AmaniSDK */,
+				B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */,
+				8C13A78E825F91D3D7394287262B19D4 /* Pods-HowToSwitchAmaniV3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1ABD139B6E942DF0FBE94F6AEB168206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32148FA221EF0D26A473C0AEE09A2AD2 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/AmaniSDK/AmaniSDK-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/AmaniSDK/AmaniSDK-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/AmaniSDK/AmaniSDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BBDABD17052B8F0A5C2140F3D93C4A2 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/OpenSSL-Universal/OpenSSL-Universal-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/OpenSSL-Universal/OpenSSL-Universal-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/OpenSSL-Universal/OpenSSL-Universal-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D3AB8EB20D89D02BCB8373E48389AF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2BAC7BB237188073615B4F0E92041DF /* Pods-HowToSwitchAmaniV3-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F796DFBFB3A75B38F0C2419322D6FE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "OpenSSL-Universal";
+			target = B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */;
+			targetProxy = 2FAF067AED81CECC3333AF0E45F377E4 /* PBXContainerItemProxy */;
+		};
+		85A13074D56722FBBA91F94B22386303 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AmaniSDK;
+			target = F1D2C92A676B850B48B5D263DD82C744 /* AmaniSDK */;
+			targetProxy = ACED89E29AC7B3BDBF693EB805D4D9C3 /* PBXContainerItemProxy */;
+		};
+		98D0BDD0270C36D983DAD8CA44CFC8A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "OpenSSL-Universal";
+			target = B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */;
+			targetProxy = 274078C53ED709F22D50AB2CDBD46F57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		098E652336E0968A31723ECA469F0EA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F8A69053CA242CAC0924A39D2F091CB /* OpenSSL-Universal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DE77390FA5E9AEC346E5F875D4D3C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52581C677D2243710CD579C14938C5E6 /* OpenSSL-Universal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8E355506198975BAC905C0C9F3B7E679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBFCF25569C33685EFE7BCE2E257EC8E /* AmaniSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B65FE9E4604639586EB3CDCBA0C76028 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87BA46E00FBB6BD5DE853E6D032F36F2 /* Pods-HowToSwitchAmaniV3.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-HowToSwitchAmaniV3/Pods-HowToSwitchAmaniV3-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HowToSwitchAmaniV3/Pods-HowToSwitchAmaniV3.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B6B3229B2562FD0E839C7FABF993FFB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52C0E8E090F397591C30815A293305AE /* AmaniSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D893224B82C7D53BBFBA7DF61BABF04C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8E07232C8689214CBE4EA8136A49442 /* Pods-HowToSwitchAmaniV3.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-HowToSwitchAmaniV3/Pods-HowToSwitchAmaniV3-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HowToSwitchAmaniV3/Pods-HowToSwitchAmaniV3.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0DB153A80ACD18ED81D8605B1C25623 /* Build configuration list for PBXNativeTarget "Pods-HowToSwitchAmaniV3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B65FE9E4604639586EB3CDCBA0C76028 /* Debug */,
+				D893224B82C7D53BBFBA7DF61BABF04C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF96F2CB1E928E597E6F004D5D2AAF7E /* Build configuration list for PBXAggregateTarget "OpenSSL-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DE77390FA5E9AEC346E5F875D4D3C34 /* Debug */,
+				098E652336E0968A31723ECA469F0EA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFDC3B41EECE76EC94B3A15F279CAB0D /* Build configuration list for PBXAggregateTarget "AmaniSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E355506198975BAC905C0C9F3B7E679 /* Debug */,
+				B6B3229B2562FD0E839C7FABF993FFB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

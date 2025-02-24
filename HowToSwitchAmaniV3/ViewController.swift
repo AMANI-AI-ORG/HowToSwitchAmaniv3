@@ -184,9 +184,9 @@ class AmaniInitializaion: UIViewController  {
     let customer = CustomerRequestModel.init(idCardNumber: "ID_NUMBER") //MARK: you should here customer's id card number
     do {
       
-    //MARK: You must add the version of the backend service you are using as a parameter here. In addition, AmaniSDK v3 is compatible v1 back service.
+    //MARK: You must add the version of the backend service you are using as a parameter here. In addition, AmaniSDK v3 is compatible with v1 backend service.
       
-   try? amani.initAmani(server: serverURL, token: token, apiVersion: apiVersion) { cmModel, error in
+      try? amani.initAmani(server: serverURL, token: token, customer: customer, apiVersion: apiVersion) { cmModel, error in
         debugPrint(cmModel)
         debugPrint(error)
      

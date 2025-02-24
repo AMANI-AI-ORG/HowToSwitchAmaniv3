@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-HowToSwitchAmaniV3/Pods-HowToSwitchAmaniV3-frameworks.sh
+${PODS_XCFRAMEWORKS_BUILD_DIR}/AmaniSDK/AmaniSDK.framework/AmaniSDK
+${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL
