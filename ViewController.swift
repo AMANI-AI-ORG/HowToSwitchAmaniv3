@@ -181,7 +181,7 @@ class AmaniInitializaion: UIViewController  {
   private func initAmani(serverURL: String, token: String) {
 
     amani.setDelegate(delegate: self)
-    let customer = CustomerRequestModel.init(idCardNumber: "22180378472") //MARK: you should here customer's id card number
+    let customer = CustomerRequestModel.init(idCardNumber: "ID_NUMBER") //MARK: you should here customer's id card number
     do {
       
     //MARK: You must add the version of the backend service you are using as a parameter here. In addition, AmaniSDK v3 is compatible v1 back service.
