@@ -67,6 +67,7 @@ class PreviewVC: BaseViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+   
       view.backgroundColor = .white
       self.navigationItem.title = "Front Side"
       confirmButton.addTarget(self, action: #selector(tapConfirm(_:)), for: .touchUpInside)

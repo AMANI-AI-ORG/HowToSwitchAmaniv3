@@ -19,6 +19,8 @@ class AmaniInitializaion: UIViewController  {
   private var tokenLabelInput = RoundedTextInput()
   private var apiVersionLabel = UILabel()
   private var apiVersionInput = RoundedTextInput()
+  private let idNumberLabel = UILabel()
+  private var idNumberInput = RoundedTextInput()
   private var submitButton = UIButton()
   private var formView = UIStackView()
   private var mainStackView = UIStackView()
@@ -28,12 +30,13 @@ class AmaniInitializaion: UIViewController  {
   @objc func tapSubmit(_ sender: UIButton) {
     guard let serverText = serverURLInput.field.text, !serverText.isEmpty,
           let tokenText = tokenLabelInput.field.text, !tokenText.isEmpty,
-          let apiVersionText = apiVersionInput.field.text, !apiVersionText.isEmpty else {
+          let apiVersionText = apiVersionInput.field.text, !apiVersionText.isEmpty,
+          let idNumberText = idNumberInput.field.text, !idNumberText.isEmpty  else {
       showAlert(message: "Please fill the blank areas. (serverURL, token, apiVersion)")
       return
     }
     
-    initAmani(serverURL: serverText, token: tokenText)
+    initAmani(serverURL: serverText, token: tokenText, idNum: idNumberText)
     
   }
   
@@ -90,7 +93,7 @@ class AmaniInitializaion: UIViewController  {
       borderColor: UIColor(hexString: "#515166"),
       placeholderColor: UIColor(hexString: "#C0C0C0"),
       isPasswordToggleEnabled: false,
-      keyboardType: .numberPad
+      keyboardType: .default
     )
     
     self.apiVersionLabel.text =  "Api Version"
@@ -106,6 +109,21 @@ class AmaniInitializaion: UIViewController  {
       isPasswordToggleEnabled: false,
       keyboardType: .numberPad
     )
+    
+    self.idNumberLabel.text = "ID Number"
+    self.idNumberLabel.textColor = UIColor(hexString: "#2020F")
+    self.idNumberLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .regular)
+    self.idNumberLabel.numberOfLines = 1
+    self.submitButton.setContentCompressionResistancePriority(.required, for: .vertical)
+    
+    self.idNumberInput = RoundedTextInput(
+      placeholderText: "",
+      borderColor: UIColor(hexString: "#515166"),
+      placeholderColor: UIColor(hexString: "#C0C0C0"),
+      isPasswordToggleEnabled: false,
+      keyboardType: .numberPad
+      )
+    
     self.submitButton.translatesAutoresizingMaskIntoConstraints = false
 
           self.submitButton.setTitle("Continue", for: .normal)
@@ -123,6 +141,7 @@ class AmaniInitializaion: UIViewController  {
       descriptionLabel, serverURLText, serverURLInput,
       tokenLabel, tokenLabelInput,
       apiVersionLabel, apiVersionInput,
+      idNumberLabel, idNumberInput
     ])
     
     self.formView.axis = .vertical
@@ -178,15 +197,15 @@ class AmaniInitializaion: UIViewController  {
   
   //MARK: We should set AmaniSDK's Delegate before initAmani method.
   //MARK: We're gonna monitoring "customer profile status changes or when the customer completes a step, either successfuly or a failure" this kind of results from delegates.
-  private func initAmani(serverURL: String, token: String) {
+  private func initAmani(serverURL: String, token: String, idNum: String) {
 
     amani.setDelegate(delegate: self)
-    let customer = CustomerRequestModel.init(idCardNumber: "ID_NUMBER") //MARK: you should here customer's id card number
+    
     do {
       
     //MARK: You must add the version of the backend service you are using as a parameter here. In addition, AmaniSDK v3 is compatible with v1 backend service.
       
-      try? amani.initAmani(server: serverURL, token: token, customer: customer, apiVersion: apiVersion) { cmModel, error in
+      try? amani.initAmani(server: serverURL, token: token, customer: CustomerRequestModel(idCardNumber: idNum), apiVersion: apiVersion) { cmModel, error in
         debugPrint(cmModel)
         debugPrint(error)
      

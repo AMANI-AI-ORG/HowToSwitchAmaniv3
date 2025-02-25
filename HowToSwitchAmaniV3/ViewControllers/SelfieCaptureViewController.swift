@@ -1,6 +1,6 @@
 //
 //  SelfieCaptureViewController.swift
-//  FaturamatikVerify
+//  HowToSwitchAmaniV3
 //
 //  Created by Bedri Doğan on 23.01.2025.
 //
@@ -15,7 +15,7 @@ class SelfieCaptureViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-      
+   
     }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -31,7 +31,7 @@ class SelfieCaptureViewController: BaseViewController {
   }
   
   private func setupUI() {
-    let selfie: Selfie = amani.selfie()
+    let selfie: PoseEstimation = amani.poseEstimation()
     do {
       
       guard let selfieVC:UIView = try selfie.start( completion: { [weak self](previewImage) in

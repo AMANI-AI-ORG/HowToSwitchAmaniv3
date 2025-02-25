@@ -27,6 +27,7 @@ class LastViewVC: BaseViewController {
   //MARK: We will set MRZDelegate here because we're gonna manage mrz results. You can manage the flow according to the result.
   override func viewDidLoad() {
     super.viewDidLoad()
+
     self.navigationItem.title = "Back Side"
     amani.setMRZDelegate(delegate: self)
     DispatchQueue.main.async {
