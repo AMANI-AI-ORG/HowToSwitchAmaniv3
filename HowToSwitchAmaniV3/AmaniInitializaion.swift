@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AmaniInitializaion.swift
 //  HowToSwitchAmaniV3
 //
 //  Created by Bedri Doğan on 17.10.2024.
@@ -30,13 +30,12 @@ class AmaniInitializaion: UIViewController  {
   @objc func tapSubmit(_ sender: UIButton) {
     guard let serverText = serverURLInput.field.text, !serverText.isEmpty,
           let tokenText = tokenLabelInput.field.text, !tokenText.isEmpty,
-          let apiVersionText = apiVersionInput.field.text, !apiVersionText.isEmpty,
-          let idNumberText = idNumberInput.field.text, !idNumberText.isEmpty  else {
+          let apiVersionText = apiVersionInput.field.text, !apiVersionText.isEmpty else {
       showAlert(message: "Please fill the blank areas. (serverURL, token, apiVersion)")
       return
     }
     
-    initAmani(serverURL: serverText, token: tokenText, idNum: idNumberText)
+    initAmani(serverURL: serverText, token: tokenText)
     
   }
   
@@ -141,7 +140,6 @@ class AmaniInitializaion: UIViewController  {
       descriptionLabel, serverURLText, serverURLInput,
       tokenLabel, tokenLabelInput,
       apiVersionLabel, apiVersionInput,
-      idNumberLabel, idNumberInput
     ])
     
     self.formView.axis = .vertical
@@ -197,7 +195,7 @@ class AmaniInitializaion: UIViewController  {
   
   //MARK: We should set AmaniSDK's Delegate before initAmani method.
   //MARK: We're gonna monitoring "customer profile status changes or when the customer completes a step, either successfuly or a failure" this kind of results from delegates.
-  private func initAmani(serverURL: String, token: String, idNum: String) {
+  private func initAmani(serverURL: String, token: String) {
 
     amani.setDelegate(delegate: self)
     
@@ -205,7 +203,7 @@ class AmaniInitializaion: UIViewController  {
       
     //MARK: You must add the version of the backend service you are using as a parameter here. In addition, AmaniSDK v3 is compatible with v1 backend service.
       
-      try? amani.initAmani(server: serverURL, token: token, customer: CustomerRequestModel(idCardNumber: idNum), apiVersion: apiVersion) { cmModel, error in
+      try? amani.initAmani(server: serverURL, token: token, apiVersion: apiVersion) { cmModel, error in
         debugPrint(cmModel)
         debugPrint(error)
      

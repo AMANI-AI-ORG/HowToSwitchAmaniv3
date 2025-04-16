@@ -11,7 +11,7 @@
 		9166AA212D6BB20F00BC1EEB /* AlertDialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166AA202D6BB20A00BC1EEB /* AlertDialogue.swift */; };
 		918F3BCF2CC1085E001BB97E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918F3BCE2CC1085E001BB97E /* AppDelegate.swift */; };
 		918F3BD12CC1085E001BB97E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918F3BD02CC1085E001BB97E /* SceneDelegate.swift */; };
-		918F3BD32CC1085E001BB97E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918F3BD22CC1085E001BB97E /* ViewController.swift */; };
+		918F3BD32CC1085E001BB97E /* AmaniInitializaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918F3BD22CC1085E001BB97E /* AmaniInitializaion.swift */; };
 		918F3BD62CC1085E001BB97E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 918F3BD52CC1085E001BB97E /* Base */; };
 		918F3BD82CC1085F001BB97E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918F3BD72CC1085F001BB97E /* Assets.xcassets */; };
 		918F3BDB2CC1085F001BB97E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 918F3BDA2CC1085F001BB97E /* Base */; };
@@ -34,7 +34,7 @@
 		918F3BCB2CC1085E001BB97E /* HowToSwitchAmaniV3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowToSwitchAmaniV3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		918F3BCE2CC1085E001BB97E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		918F3BD02CC1085E001BB97E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		918F3BD22CC1085E001BB97E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		918F3BD22CC1085E001BB97E /* AmaniInitializaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmaniInitializaion.swift; sourceTree = "<group>"; };
 		918F3BD52CC1085E001BB97E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		918F3BD72CC1085F001BB97E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		918F3BDA2CC1085F001BB97E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 				91C686F02D6883D300894278 /* Components */,
 				918F3BCE2CC1085E001BB97E /* AppDelegate.swift */,
 				918F3BD02CC1085E001BB97E /* SceneDelegate.swift */,
-				918F3BD22CC1085E001BB97E /* ViewController.swift */,
+				918F3BD22CC1085E001BB97E /* AmaniInitializaion.swift */,
 				918F3BD42CC1085E001BB97E /* Main.storyboard */,
 				918F3BD72CC1085F001BB97E /* Assets.xcassets */,
 				918F3BD92CC1085F001BB97E /* LaunchScreen.storyboard */,
@@ -275,7 +275,7 @@
 			files = (
 				91C687E12D68A5D100894278 /* LastViewVC.swift in Sources */,
 				91C687D92D689C5F00894278 /* IDCaptureViewController.swift in Sources */,
-				918F3BD32CC1085E001BB97E /* ViewController.swift in Sources */,
+				918F3BD32CC1085E001BB97E /* AmaniInitializaion.swift in Sources */,
 				91C686F42D6884D100894278 /* UIColorExtension.swift in Sources */,
 				91C687DB2D689C6800894278 /* SelfieCaptureViewController.swift in Sources */,
 				91C687E42D68AA8300894278 /* BaseViewController.swift in Sources */,
