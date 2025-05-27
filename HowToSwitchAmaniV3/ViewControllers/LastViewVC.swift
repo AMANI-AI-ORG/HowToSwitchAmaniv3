@@ -64,14 +64,21 @@ class LastViewVC: BaseViewController {
   
   @objc func tapConfirm(_ sender: UIButton) {
     debugPrint("tapConfirm button.............")
-    DispatchQueue.main.async {
-      if let nviData = self.nviData {
-        let vc = NFCViewController()
-        vc.nviData = nviData
-        self.navigationController?.pushViewController(vc, animated: true)
-        
+    amani.IdCapture().upload(completion: { [weak self] result in
+      if result == true {
+        DispatchQueue.main.async {
+          if let nviData = self?.nviData {
+            let vc = NFCViewController()
+            vc.nviData = nviData
+            self?.navigationController?.pushViewController(vc, animated: true)
+            
+          }
+        }
+      } else {
+        debugPrint("kimlik görselleri yüklenemedi --- nfc akışına geçiyor")
       }
-    }
+    })
+    
   }
   
   @objc func tapTryAgain(_ sender: UIButton) {

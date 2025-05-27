@@ -1,5 +1,5 @@
 PODS:
-  - AmaniSDK (3.4.5):
+  - AmaniSDK (3.4.12):
     - OpenSSL-Universal (= 1.1.2301)
   - OpenSSL-Universal (1.1.2301)
 
@@ -9,11 +9,11 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/AmaniTechnologiesLtd/Mobile_SDK_Repo:
     - AmaniSDK
-  https://github.com/CocoaPods/Specs:
+  https://github.com/CocoaPods/Specs.git:
     - OpenSSL-Universal
 
 SPEC CHECKSUMS:
-  AmaniSDK: 0b54d8d20f0d6e58cbb102d484b14d73afc322dc
+  AmaniSDK: 68b6ee8ad776e8b2f7acbc9e97350ca02554207c
   OpenSSL-Universal: ca89c20240633a77c776082ba76b7d90f992bf77
 
 PODFILE CHECKSUM: 1600d007c1ebaaf66dc77563a90e191a0fd2bda0

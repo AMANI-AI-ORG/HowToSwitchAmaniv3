@@ -21,20 +21,32 @@ class NFCViewController: BaseViewController {
   @objc func tapScanNFCButton(_ sender: UIButton) {
     Task {
       if let nviData = self.nviData {
-        amani.IdCapture().setNfcIcons(newReadIcon: "👀",newBlankIcon: "🚀")
-        let param = await amani.IdCapture().startNFC(nvi: nviData)
-       
-        if !param == false {
-         
-          amani.IdCapture().upload { isUploaded in
-            debugPrint("id capture uploaded succes: \(isUploaded)")
-            if let isUploaded = isUploaded {
-             
-              self.showAlert(isUploaded: isUploaded)
-            }
+        debugPrint("gelen nvi datası: \(nviData)")
+//        amani.IdCapture().setNfcIcons(newReadIcon: "👀",newBlankIcon: "🚀")
+        amani.scanNFC().setType(type: "TUR_ID_1")
+        amani.scanNFC().setIcons(newReadIcon: "👀", newBlankIcon: "🚀")
+        
+        do {
+          let param = try await amani.scanNFC().start(nviData: nviData)
+          
+          if (param == nil) == false {
             
+            amani.scanNFC().upload { isUploaded in
+//              debugPrint("id capture uploaded succes: \(isUploaded)")
+              if let isUploaded = isUploaded {
+                
+                self.showAlert(isUploaded: isUploaded)
+              }
+              
+            }
           }
+          
+        }catch let error {
+          debugPrint(error)
         }
+      
+//        let param = await amani.IdCapture().startNFC(nvi: nviData)
+       
     
       }
     }
