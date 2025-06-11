@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E238111ADE0BC0F41C67BAA /* Pods_HowToSwitchAmaniV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558B2552D5C34F9B3149DD12 /* Pods_HowToSwitchAmaniV3.framework */; };
 		9166A93F2D6B9A4F00BC1EEB /* NFCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166A93E2D6B9A4500BC1EEB /* NFCViewController.swift */; };
 		9166AA212D6BB20F00BC1EEB /* AlertDialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166AA202D6BB20A00BC1EEB /* AlertDialogue.swift */; };
 		918F3BCF2CC1085E001BB97E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918F3BCE2CC1085E001BB97E /* AppDelegate.swift */; };
@@ -27,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		008280C26DDB8AE035D72D73 /* Pods-HowToSwitchAmaniV3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowToSwitchAmaniV3.debug.xcconfig"; path = "Target Support Files/Pods-HowToSwitchAmaniV3/Pods-HowToSwitchAmaniV3.debug.xcconfig"; sourceTree = "<group>"; };
+		2A0FA75619AD456D84C877BB /* Pods-HowToSwitchAmaniV3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowToSwitchAmaniV3.release.xcconfig"; path = "Target Support Files/Pods-HowToSwitchAmaniV3/Pods-HowToSwitchAmaniV3.release.xcconfig"; sourceTree = "<group>"; };
+		558B2552D5C34F9B3149DD12 /* Pods_HowToSwitchAmaniV3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowToSwitchAmaniV3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9166A93E2D6B9A4500BC1EEB /* NFCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCViewController.swift; sourceTree = "<group>"; };
 		9166A9402D6BA0A900BC1EEB /* HowToSwitchAmaniV3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HowToSwitchAmaniV3.entitlements; sourceTree = "<group>"; };
 		9166AA202D6BB20A00BC1EEB /* AlertDialogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogue.swift; sourceTree = "<group>"; };
@@ -54,15 +58,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E238111ADE0BC0F41C67BAA /* Pods_HowToSwitchAmaniV3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39AB9B7BE2093781624D8E3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				558B2552D5C34F9B3149DD12 /* Pods_HowToSwitchAmaniV3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		445E0A25A094515B60CE3683 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				008280C26DDB8AE035D72D73 /* Pods-HowToSwitchAmaniV3.debug.xcconfig */,
+				2A0FA75619AD456D84C877BB /* Pods-HowToSwitchAmaniV3.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -73,6 +88,7 @@
 				918F3BCD2CC1085E001BB97E /* HowToSwitchAmaniV3 */,
 				918F3BCC2CC1085E001BB97E /* Products */,
 				445E0A25A094515B60CE3683 /* Pods */,
+				39AB9B7BE2093781624D8E3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 918F3BDF2CC1085F001BB97E /* Build configuration list for PBXNativeTarget "HowToSwitchAmaniV3" */;
 			buildPhases = (
+				B5210FB5293E814B4B7E4FD5 /* [CP] Check Pods Manifest.lock */,
 				918F3BC72CC1085E001BB97E /* Sources */,
 				918F3BC82CC1085E001BB97E /* Frameworks */,
 				918F3BC92CC1085E001BB97E /* Resources */,
+				C6EDEE298B119E2167E52640 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,6 +225,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5210FB5293E814B4B7E4FD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HowToSwitchAmaniV3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6EDEE298B119E2167E52640 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HowToSwitchAmaniV3/Pods-HowToSwitchAmaniV3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HowToSwitchAmaniV3/Pods-HowToSwitchAmaniV3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HowToSwitchAmaniV3/Pods-HowToSwitchAmaniV3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		918F3BC72CC1085E001BB97E /* Sources */ = {
@@ -373,6 +433,7 @@
 		};
 		918F3BE02CC1085F001BB97E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 008280C26DDB8AE035D72D73 /* Pods-HowToSwitchAmaniV3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -404,6 +465,7 @@
 		};
 		918F3BE12CC1085F001BB97E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A0FA75619AD456D84C877BB /* Pods-HowToSwitchAmaniV3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
